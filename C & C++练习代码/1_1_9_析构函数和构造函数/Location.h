@@ -1,4 +1,4 @@
-//@description:		4¡¢×Ô¶¨Òå¸´ÖÆ¹¹Ôìº¯Êı£¨Ç³¸´ÖÆ¡¢Éî¸´ÖÆ£©
+ï»¿//@description:		4ã€è‡ªå®šä¹‰å¤åˆ¶æ„é€ å‡½æ•°ï¼ˆæµ…å¤åˆ¶ã€æ·±å¤åˆ¶ï¼‰
 
 #include<iostream>
 using namespace std ;
@@ -11,7 +11,7 @@ public :
 		  Y = yy ; 
 		  cout << "constructor called." << endl ; 
 	  }
-      //×Ô¶¨Òå¸´ÖÆ¹¹Ôìº¯Êı
+      //è‡ªå®šä¹‰å¤åˆ¶æ„é€ å‡½æ•°
 	  Location ( const Location  & p ) 
       { 
 		  X = p.X ;  

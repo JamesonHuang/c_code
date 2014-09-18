@@ -1,9 +1,9 @@
-
+ï»¿
 #include<iostream>
 #include "PClass.h"
 using namespace std;
 
-//ÊµÏÖÀàPClassÖĞµÄprint·½·¨
+//å®ç°ç±»PClassä¸­çš„printæ–¹æ³•
 void PClass::print()
 {
 	cout<<x<<y<<endl;

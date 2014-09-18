@@ -1,4 +1,4 @@
-//@description:		3¡¢ÓÃ³õÊ¼Ê½¶ÔÊı¾İ³ÉÔ±ÖÃÖµ
+ï»¿//@description:		3ã€ç”¨åˆå§‹å¼å¯¹æ•°æ®æˆå‘˜ç½®å€¼
 
 #include <iostream>
 #include "Date.h"
@@ -7,24 +7,24 @@ using namespace std;
 
 
 /*
-Date:: Date(int y, int m, int d)	// ´ø²ÎÊı¹¹Ôìº¯Êı
+Date:: Date(int y, int m, int d)	// å¸¦å‚æ•°æ„é€ å‡½æ•°
  { year = y ;    month = m ;    day = d ;
    cout <<year <<"/"<<month<<"/"<<day<<": Date with argument object initialized."<<"\n" ;
  }
  */
-Date:: Date(int y, int m, int d):year(y),month(m),day(d)	// ´ø²ÎÊı¹¹Ôìº¯Êı, ÓÃ³õÊ¼Ê½¶ÔÊı¾İ³ÉÔ±ÖÃÖµ
+Date:: Date(int y, int m, int d):year(y),month(m),day(d)	// å¸¦å‚æ•°æ„é€ å‡½æ•°, ç”¨åˆå§‹å¼å¯¹æ•°æ®æˆå‘˜ç½®å€¼
 
  { 
    cout <<year <<"/"<<month<<"/"<<day<<": Date with argument object initialized."<<"\n" ;
  }
 
-// ÎŞ²Î¹¹Ôìº¯Êı
+// æ— å‚æ„é€ å‡½æ•°
 Date:: Date() 
 { 
 	cout << "Date object initialized.\n" ; 
 }
 
-// Îö¹¹º¯Êı	
+// ææ„å‡½æ•°	
 Date:: ~Date() 
 { 
 	cout << "Date object destroyed.\n" ; 

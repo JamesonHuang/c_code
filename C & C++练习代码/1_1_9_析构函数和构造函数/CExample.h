@@ -1,15 +1,15 @@
-#include <iostream>
+ï»¿#include <iostream>
 using namespace std;
 
 class CExample {
 private:
     int a;
 public:
-      //¹¹Ôìº¯Êý
+      //æž„é€ å‡½æ•°
     CExample(int b)
     { a = b;}
 
-      //Ò»°ãº¯Êý
+      //ä¸€èˆ¬å‡½æ•°
     void Show ()
     {
         cout<<a<<endl;

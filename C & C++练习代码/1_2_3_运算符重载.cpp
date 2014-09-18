@@ -1,7 +1,7 @@
-/*********************************************************************
-	@ Title:		ÖØÔØÔËËã·û	
+ï»¿/*********************************************************************
+	@ Title:		é‡è½½è¿ç®—ç¬¦	
 
-	@ Description:		1¡¢ÖØÔØÔËËã·ûº¯Êý
+	@ Description:		1ã€é‡è½½è¿ç®—ç¬¦å‡½æ•°
 
 	@ Conclusion:			
 
@@ -18,12 +18,12 @@ using namespace std;
 class Calculator
 {
 public:
-	//¹¹Ôìº¯Êý
+	//æž„é€ å‡½æ•°
     	Calculator() 
 	{ 
 		value = 0 ; 
 	}
-	//¶¨Òå3¸öÔËËã·ûº¯Êý
+	//å®šä¹‰3ä¸ªè¿ç®—ç¬¦å‡½æ•°
     	void operator ++ () ;
     	void operator -- () ; 
     	unsigned int operator() () ;
@@ -32,7 +32,7 @@ private:
     	unsigned int value;
 };
  
-//ÔËËã·ûº¯Êý¾ßÌå¶¨Òå
+//è¿ç®—ç¬¦å‡½æ•°å…·ä½“å®šä¹‰
 void Calculator::operator ++ ()
 { 
 	if ( value < 65535 )

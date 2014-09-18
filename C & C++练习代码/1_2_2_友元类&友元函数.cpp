@@ -1,9 +1,9 @@
-/*********************************************************************
-	@ Title:		ÓÑÔªº¯Êý¡¢ÓÑÔªÀà	
+ï»¿/*********************************************************************
+	@ Title:		å‹å…ƒå‡½æ•°ã€å‹å…ƒç±»	
 
-	@ Description:		1¡¢½¨Á¢Ò»¸öÓÑÔªº¯Êý¡¢ÓÑÔªÀà
+	@ Description:		1ã€å»ºç«‹ä¸€ä¸ªå‹å…ƒå‡½æ•°ã€å‹å…ƒç±»
 						
-				2¡¢Í¨¹ýÓÑÔª·ÃÎÊÔ´ÀàµÄprivate³ÉÔ±
+				2ã€é€šè¿‡å‹å…ƒè®¿é—®æºç±»çš„privateæˆå‘˜
 						
 
 	@ Conclusion:			
@@ -17,18 +17,18 @@
 
 using namespace std;
 
-//Ô´Àà
+//æºç±»
 class MyClass
 {
 public:
-	int pubX, pubY;					//¹«ÓÐ³ÉÔ±±äÁ¿
+	int pubX, pubY;					//å…¬æœ‰æˆå‘˜å˜é‡
 	
-	//ÉùÃ÷¸ÃÀàµÄÓÑÔªÀà£¬²»¹ÜÊÇpublic»¹ÊÇprivateÏÂ£¬¶¼ÉúÐ§
+	//å£°æ˜Žè¯¥ç±»çš„å‹å…ƒç±»ï¼Œä¸ç®¡æ˜¯publicè¿˜æ˜¯privateä¸‹ï¼Œéƒ½ç”Ÿæ•ˆ
 	friend class FriendClass;
 
-	//MyClass(int X):pubY(X){}			//¹¹Ôìº¯Êý³õÊ¼»¯
+	//MyClass(int X):pubY(X){}			//æž„é€ å‡½æ•°åˆå§‹åŒ–
 
-	//ÉèÖÃ¹«ÓÐ³ÉÔ±±äÁ¿pubX¡¢pubY
+	//è®¾ç½®å…¬æœ‰æˆå‘˜å˜é‡pubXã€pubY
 	void setPubX ( int X )				
 	{
 		this -> pubX =X;
@@ -40,7 +40,7 @@ public:
 		cout<<"This is setPubY, PubY = "<<(this -> pubY)<<endl;
 	}
 
-	//ÉèÖÃË½ÓÐ³ÉÔ±±äÁ¿priX£¬priY
+	//è®¾ç½®ç§æœ‰æˆå‘˜å˜é‡priXï¼ŒpriY
 	void setPriX ( int X )				
 	{
 		this -> priX =X;
@@ -52,20 +52,20 @@ public:
 		cout<<"This is setPriY, PriY = "<<(this -> priY)<<endl;
 	}
 
-	friend void friFunc(MyClass &p);		//ÉùÃ÷ÓÑÔªº¯Êý
-	//void friFunc(MyClass &p);				//Î´ÉùÃ÷ÓÑÔªº¯ÊýÊ±£¬ÓÑÔªº¯Êý¶¨ÒåÎÞ·¨·ÃÎÊ
+	friend void friFunc(MyClass &p);		//å£°æ˜Žå‹å…ƒå‡½æ•°
+	//void friFunc(MyClass &p);				//æœªå£°æ˜Žå‹å…ƒå‡½æ•°æ—¶ï¼Œå‹å…ƒå‡½æ•°å®šä¹‰æ— æ³•è®¿é—®
 
 private:
-	int priX,priY;					//Ë½ÓÐ³ÉÔ±±äÁ¿
+	int priX,priY;					//ç§æœ‰æˆå‘˜å˜é‡
 	
-	//Ë½ÓÐ²Ù×÷
+	//ç§æœ‰æ“ä½œ
 	void priFunc()
 	{
-		cout<<"ÕâÊÇË½ÓÐ²Ù×÷º¯Êý"<<endl;
+		cout<<"è¿™æ˜¯ç§æœ‰æ“ä½œå‡½æ•°"<<endl;
 	}
 };
 
-//ÓÑÔªº¯Êý¶¨Òå
+//å‹å…ƒå‡½æ•°å®šä¹‰
 void friFunc(MyClass &p)
 {
 	p.priX = 10;
@@ -74,27 +74,27 @@ void friFunc(MyClass &p)
 	
 }
 
-//·ÇÓÑÔªÀà£¬µ«ÓÐÓÑÔªº¯Êý
+//éžå‹å…ƒç±»ï¼Œä½†æœ‰å‹å…ƒå‡½æ•°
 class NFriendClass
 {
 public:
 	MyClass mc;
 	void printXY()
 	{
-		/*    Í¨¹ýº¯Êý»ñÈ¡¹«ÓÐ¡¢Ë½ÓÐ³ÉÔ±£¬¾ù³É¹¦    */
+		/*    é€šè¿‡å‡½æ•°èŽ·å–å…¬æœ‰ã€ç§æœ‰æˆå‘˜ï¼Œå‡æˆåŠŸ    */
 		mc.setPubX(10);		
 		mc.setPubY(20);
 		mc.setPriX(30);
 		mc.setPriY(40);
 
 
-		//Ö±½Ó»ñÈ¡³ÉÔ±±äÁ¿£¬¹«ÓÐ³ÉÔ±±äÁ¿»ñÈ¡³É¹¦£¬µ«Ë½ÓÐ³ÉÔ±ÔòÊ§°Ü
-		cout<<"Ö±½Ó»ñÈ¡PubX£º"<<mc.pubX<<endl;
-		cout<<"Ö±½Ó»ñÈ¡PubY£º"<<mc.pubY<<endl;
+		//ç›´æŽ¥èŽ·å–æˆå‘˜å˜é‡ï¼Œå…¬æœ‰æˆå‘˜å˜é‡èŽ·å–æˆåŠŸï¼Œä½†ç§æœ‰æˆå‘˜åˆ™å¤±è´¥
+		cout<<"ç›´æŽ¥èŽ·å–PubXï¼š"<<mc.pubX<<endl;
+		cout<<"ç›´æŽ¥èŽ·å–PubYï¼š"<<mc.pubY<<endl;
 		
 		/*
-		cout<<"Ö±½Ó»ñÈ¡PriX£º"<<mc.priX<<endl;			//ÌáÊ¾PriX²»¿É·ÃÎÊ
-		cout<<"Ö±½Ó»ñÈ¡PriY£º"<<mc.priY<<endl;
+		cout<<"ç›´æŽ¥èŽ·å–PriXï¼š"<<mc.priX<<endl;			//æç¤ºPriXä¸å¯è®¿é—®
+		cout<<"ç›´æŽ¥èŽ·å–PriYï¼š"<<mc.priY<<endl;
 		mc.priFunc();
 		*/		
 		
@@ -103,31 +103,31 @@ public:
 
 };
 
-//ÓÑÔªÀà
+//å‹å…ƒç±»
 class FriendClass
 {
 public:
 	MyClass mc;
 	void printXY()
 	{
-		/*    Í¨¹ýº¯Êý»ñÈ¡¹«ÓÐ¡¢Ë½ÓÐ³ÉÔ±£¬¾ù³É¹¦    */
+		/*    é€šè¿‡å‡½æ•°èŽ·å–å…¬æœ‰ã€ç§æœ‰æˆå‘˜ï¼Œå‡æˆåŠŸ    */
 		mc.setPubX(10);		
 		mc.setPubY(20);
 		mc.setPriX(30);
 		mc.setPriY(40);
 
 
-		//Ö±½Ó»ñÈ¡³ÉÔ±±äÁ¿£¬¹«ÓÐ¡¢Ë½ÓÐ³ÉÔ±±äÁ¿»ñÈ¡³É¹¦
-		cout<<"Ö±½Ó»ñÈ¡PubX£º"<<mc.pubX<<endl;
-		cout<<"Ö±½Ó»ñÈ¡PubY£º"<<mc.pubY<<endl;
+		//ç›´æŽ¥èŽ·å–æˆå‘˜å˜é‡ï¼Œå…¬æœ‰ã€ç§æœ‰æˆå‘˜å˜é‡èŽ·å–æˆåŠŸ
+		cout<<"ç›´æŽ¥èŽ·å–PubXï¼š"<<mc.pubX<<endl;
+		cout<<"ç›´æŽ¥èŽ·å–PubYï¼š"<<mc.pubY<<endl;
 		
 		
-		cout<<"Ö±½Ó»ñÈ¡PriX£º"<<mc.priX<<endl;			//³É¹¦·ÃÎÊË½ÓÐ³ÉÔ±±äÁ¿
-		cout<<"Ö±½Ó»ñÈ¡PriY£º"<<mc.priY<<endl;
+		cout<<"ç›´æŽ¥èŽ·å–PriXï¼š"<<mc.priX<<endl;			//æˆåŠŸè®¿é—®ç§æœ‰æˆå‘˜å˜é‡
+		cout<<"ç›´æŽ¥èŽ·å–PriYï¼š"<<mc.priY<<endl;
 		
 		cout<<endl;
 
-		mc.priFunc();						//Í¨¹ýÓÑÔª·ÃÎÊÔªÀàµÄË½ÓÐº¯Êý
+		mc.priFunc();						//é€šè¿‡å‹å…ƒè®¿é—®å…ƒç±»çš„ç§æœ‰å‡½æ•°
 	}
 };
 
@@ -135,17 +135,17 @@ public:
 
 int main()
 {
-	//²Ù×÷·ÇÓÑÔªÀà	
+	//æ“ä½œéžå‹å…ƒç±»	
 	NFriendClass nfc;
 	nfc.printXY();
 	
 	
 
-	//²Ù×÷ÓÑÔªÀà
+	//æ“ä½œå‹å…ƒç±»
 	FriendClass fc;
 	fc.printXY();
 	
-	//²Ù×÷ÓÑÔªº¯Êý
+	//æ“ä½œå‹å…ƒå‡½æ•°
 	MyClass mc;
 	friFunc(mc);
 

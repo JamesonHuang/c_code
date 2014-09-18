@@ -1,10 +1,10 @@
-/*********************************************************************
-	@ Title:		¿½±´¹¹º¯Êı & =ÖØÔØ²Ù×÷·û	
+ï»¿/*********************************************************************
+	@ Title:		æ‹·è´æ„å‡½æ•° & =é‡è½½æ“ä½œç¬¦	
 
-	@ Description:		1¡¢ÊìÏ¤¿½±´¹¹Ôìº¯ÊıºÍcopy assign²Ù×÷·û					
+	@ Description:		1ã€ç†Ÿæ‚‰æ‹·è´æ„é€ å‡½æ•°å’Œcopy assignæ“ä½œç¬¦					
 						
-				2¡¢²âÊÔ·µ»ØÍâ²¿Ö¸Õë»òÒıÓÃ£¬ÓÃ»§Ê¹ÓÃ
-				Íâ²¿Ö¸Õë¸Ä±äÄÚ²¿Êı¾İÒÔ¼°½â¾ö·½·¨
+				2ã€æµ‹è¯•è¿”å›å¤–éƒ¨æŒ‡é’ˆæˆ–å¼•ç”¨ï¼Œç”¨æˆ·ä½¿ç”¨
+				å¤–éƒ¨æŒ‡é’ˆæ”¹å˜å†…éƒ¨æ•°æ®ä»¥åŠè§£å†³æ–¹æ³•
 
 	@ Conclusion:			
 
@@ -17,8 +17,8 @@
 using namespace std;
 
 
-//-------------1¡¢ÊìÏ¤¿½±´¹¹Ôìº¯ÊıºÍcopy assignmentº¯Êı-----------------//
-class Refer					//ÒıÓÃ¶ÔÏó
+//-------------1ã€ç†Ÿæ‚‰æ‹·è´æ„é€ å‡½æ•°å’Œcopy assignmentå‡½æ•°-----------------//
+class Refer					//å¼•ç”¨å¯¹è±¡
 {
 public:	
 	void setA(int a)
@@ -51,18 +51,18 @@ public:
 	~Test()
 	{
 	}
-	Test(const Test &other)							//¿½±´¹¹Ôìº¯Êı
+	Test(const Test &other)							//æ‹·è´æ„é€ å‡½æ•°
 	{
-		cout << "ÕâÊÇ¿½±´¹¹Ôìº¯Êı" << endl;
-		res = other.res;						//ÄÚÖÃÀàĞÍÖ±½Ó¸³Öµ
-		r = other.r;							//Ó¦ÓÃ¶ÔÏóÖ±½Ó¸³Öµ
-		rr = new Refer();						//Ö¸ÕëĞëÖØĞÂ·ÖÅäÒ»¶Î¿Õ¼ä£¬²¢ÖğÒ»¸³Öµ
+		cout << "è¿™æ˜¯æ‹·è´æ„é€ å‡½æ•°" << endl;
+		res = other.res;						//å†…ç½®ç±»å‹ç›´æ¥èµ‹å€¼
+		r = other.r;							//åº”ç”¨å¯¹è±¡ç›´æ¥èµ‹å€¼
+		rr = new Refer();						//æŒ‡é’ˆé¡»é‡æ–°åˆ†é…ä¸€æ®µç©ºé—´ï¼Œå¹¶é€ä¸€èµ‹å€¼
 		rr->setA( other.rr->getA() );
 		rr->setB( other.rr->getB() );
 	}
-	const Test & operator=(const Test &other)				//ÖØÔØ¸³Öµ²Ù×÷·û
+	const Test & operator=(const Test &other)				//é‡è½½èµ‹å€¼æ“ä½œç¬¦
 	{
-		cout << "ÕâÊÇÖØÔØ¸´ÖÆ²Ù×÷·û" << endl;
+		cout << "è¿™æ˜¯é‡è½½å¤åˆ¶æ“ä½œç¬¦" << endl;
 		res = other.res;
 		r = other.r;
 		rr = new Refer();
@@ -91,12 +91,12 @@ public:
 	{
 		this->rr = rr;
 	}
-	//Ç¿ÁÒ¾¯¸æ£º·µ²¿Ö¸ÕëÖ¸ÏòÄÚ²¿¶ÔÏó,Íâ²¿Ö¸Õë¿ÉÒÔ¸Ä±äprivateµÄÊı¾İ
+	//å¼ºçƒˆè­¦å‘Šï¼šè¿”éƒ¨æŒ‡é’ˆæŒ‡å‘å†…éƒ¨å¯¹è±¡,å¤–éƒ¨æŒ‡é’ˆå¯ä»¥æ”¹å˜privateçš„æ•°æ®
 	Refer* getReferPointer()
 	{
 		return rr;
 	}
-	//½â¾öÖ®·¨
+	//è§£å†³ä¹‹æ³•
 	Refer const * getReferP()
 	{
 		return rr;
@@ -110,14 +110,14 @@ private:
 
 };
 
-//²âÊÔ¸´ÖÆ¹¹Ôìº¯ÊıºÍ¸³Öµ²Ù×÷·û
+//æµ‹è¯•å¤åˆ¶æ„é€ å‡½æ•°å’Œèµ‹å€¼æ“ä½œç¬¦
 void testCopyConstructorAssign()
 {
-	Refer r;							//¶¨Òårefer¶ÔÏó£¬²¢³õÊ¼»¯Æä³ÉÔ±±äÁ¿
+	Refer r;							//å®šä¹‰referå¯¹è±¡ï¼Œå¹¶åˆå§‹åŒ–å…¶æˆå‘˜å˜é‡
 	r.setA(10);
 	r.setB(20);
 
-	Test source;							//¶¨ÒåÔ´¶ÔÏó£¬²¢³õÊ¼»¯
+	Test source;							//å®šä¹‰æºå¯¹è±¡ï¼Œå¹¶åˆå§‹åŒ–
 	source.setRes( 30 );
 	source.setRefer( r );
 
@@ -125,7 +125,7 @@ void testCopyConstructorAssign()
 	r.setB( 50 );	
 	source.setReferPointer( &r );	
 
-	cout << "Ô´¶ÔÏóµÄ³ÉÔ±ÖµÊÇ£º" << endl;
+	cout << "æºå¯¹è±¡çš„æˆå‘˜å€¼æ˜¯ï¼š" << endl;
 	cout << "source.Res:" << source.getRes() << endl;
 
 	cout << "source.getRefer.A:" << source.getRefer().getA() <<endl;
@@ -135,9 +135,9 @@ void testCopyConstructorAssign()
 	cout << "source.getReferPointer.B:" << source.getReferPointer()->getB() << endl;
 
 	Test obj(source);
-	//Test obj = source;						//µ÷ÓÃ¿½±´¹¹Ôìº¯Êı
-	//obj = source;							//µ÷ÓÃ¸³Öµ²Ù×÷·û£¬µ÷ÓÃÄÄ¸öº¯ÊıÈ¡¾öÓÚobjÊÇ·ñ³õÊ¼»¯		
-	cout << "Ä¿±ê¶ÔÏóµÄ³ÉÔ±ÖµÊÇ£º" << endl;
+	//Test obj = source;						//è°ƒç”¨æ‹·è´æ„é€ å‡½æ•°
+	//obj = source;							//è°ƒç”¨èµ‹å€¼æ“ä½œç¬¦ï¼Œè°ƒç”¨å“ªä¸ªå‡½æ•°å–å†³äºobjæ˜¯å¦åˆå§‹åŒ–		
+	cout << "ç›®æ ‡å¯¹è±¡çš„æˆå‘˜å€¼æ˜¯ï¼š" << endl;
 	cout << "obj.Res:" << obj.getRes() << endl;
 
 	cout << "obj.getRefer.A:" << obj.getRefer().getA() <<endl;
@@ -147,7 +147,7 @@ void testCopyConstructorAssign()
 	cout << "obj.getReferPointer.B:" << obj.getReferPointer()->getB() << endl;
 
 
-	cout << "¸Ä±äobj¶ÔÏóµÄÊı¾İ£º" << endl;
+	cout << "æ”¹å˜objå¯¹è±¡çš„æ•°æ®ï¼š" << endl;
 	obj.setRes( 80 );
 	r.setA( 90 );
 	r.setB( 100 );
@@ -156,7 +156,7 @@ void testCopyConstructorAssign()
 	r.setB( 120 );
 	obj.setReferPointer( &r );
 
-	cout << "Ä¿±ê¶ÔÏóµÄ³ÉÔ±ÖµÊÇ£º" << endl;
+	cout << "ç›®æ ‡å¯¹è±¡çš„æˆå‘˜å€¼æ˜¯ï¼š" << endl;
 	cout << "obj.Res:" << obj.getRes() << endl;
 
 	cout << "obj.getRefer.A:" << obj.getRefer().getA() <<endl;
@@ -166,10 +166,10 @@ void testCopyConstructorAssign()
 	cout << "obj.getReferPointer.B:" << obj.getReferPointer()->getB() << endl;
 
 
-	//Ô´¶ÔÏóºÍÄ¿±ê¶ÔÏñ¸÷¶ÔÓ¦Ò»¶Î¿Õ¼ä£¬¸Ä±äÁËÄ¿±ê¶ÔÏóµÄÊı¾İ£¬²»»áÓ°Ïìµ½Ô´¶ÔÏóµÄÊı¾İ
-	cout << "´ËÊ±£¬Ô´¶ÔÏóµÄ³ÉÔ±ÖµÊÇ£º" << endl;
+	//æºå¯¹è±¡å’Œç›®æ ‡å¯¹åƒå„å¯¹åº”ä¸€æ®µç©ºé—´ï¼Œæ”¹å˜äº†ç›®æ ‡å¯¹è±¡çš„æ•°æ®ï¼Œä¸ä¼šå½±å“åˆ°æºå¯¹è±¡çš„æ•°æ®
+	cout << "æ­¤æ—¶ï¼Œæºå¯¹è±¡çš„æˆå‘˜å€¼æ˜¯ï¼š" << endl;
 
-	cout << "Ô´¶ÔÏóµÄ³ÉÔ±ÖµÊÇ£º" << endl;
+	cout << "æºå¯¹è±¡çš„æˆå‘˜å€¼æ˜¯ï¼š" << endl;
 	cout << "source.Res:" << source.getRes() << endl;
 
 	cout << "source.getRefer.A:" << source.getRefer().getA() <<endl;
@@ -180,7 +180,7 @@ void testCopyConstructorAssign()
 
 }
 
-//-------------2¡¢ÊìÏ¤¿½±´¹¹Ôìº¯ÊıºÍcopy assignmentº¯Êı-----------------//
+//-------------2ã€ç†Ÿæ‚‰æ‹·è´æ„é€ å‡½æ•°å’Œcopy assignmentå‡½æ•°-----------------//
 void testPointerChangeInternalData()
 {
 	Refer r;
@@ -194,20 +194,20 @@ void testPointerChangeInternalData()
 	r.setB( 50 );	
 	source.setReferPointer( &r );	
 
-	cout << "¸Ä±äÇ°ÄÚ²¿Ö¸ÕëÖ¸Ïò¶ÔÏóµÄÊı¾İ£º" << endl;
+	cout << "æ”¹å˜å‰å†…éƒ¨æŒ‡é’ˆæŒ‡å‘å¯¹è±¡çš„æ•°æ®ï¼š" << endl;
 	cout << "source.getReferPointer().A: " << source.getReferPointer()->getA() << endl;
 	cout << "source.getReferPointer().B: " << source.getReferPointer()->getB() << endl << endl;
 
-	//Ç¿ÁÒ¾¯¸æ£º·µ²¿Ö¸ÕëÖ¸ÏòÄÚ²¿¶ÔÏó
+	//å¼ºçƒˆè­¦å‘Šï¼šè¿”éƒ¨æŒ‡é’ˆæŒ‡å‘å†…éƒ¨å¯¹è±¡
 	Refer *t = source.getReferPointer();
-	//const Refer *t = source.getReferP();						//½â¾ö·½·¨
-	t->setA( 60 );									//Íâ²¿Ö¸Õët¸Ä±äÖ¸Ïò¶ÔÏóµÄÊı¾İ£¬ÄÚ²¿Ö¸ÕërrÖ¸ÏòµÄÊı¾İÒ²¸ú×Å¸Ä±ä
+	//const Refer *t = source.getReferP();						//è§£å†³æ–¹æ³•
+	t->setA( 60 );									//å¤–éƒ¨æŒ‡é’ˆtæ”¹å˜æŒ‡å‘å¯¹è±¡çš„æ•°æ®ï¼Œå†…éƒ¨æŒ‡é’ˆrræŒ‡å‘çš„æ•°æ®ä¹Ÿè·Ÿç€æ”¹å˜
 	t->setB( 70 );
-	cout << "Íâ²¿Ö¸Õët¸Ä±äÖ¸Ïò¶ÔÏóµÄÊı¾İ:" << endl;
+	cout << "å¤–éƒ¨æŒ‡é’ˆtæ”¹å˜æŒ‡å‘å¯¹è±¡çš„æ•°æ®:" << endl;
 	cout << "t->A:" << t->getA() << endl;
 	cout << "t->B:" << t->getB() << endl << endl;
 	
-	cout << "¸Ä±äºóÄÚ²¿Ö¸ÕëÖ¸Ïò¶ÔÏóµÄÊı¾İ£º" << endl;
+	cout << "æ”¹å˜åå†…éƒ¨æŒ‡é’ˆæŒ‡å‘å¯¹è±¡çš„æ•°æ®ï¼š" << endl;
 	cout << "source.getReferPointer().A: " << source.getReferPointer()->getA() << endl;
 	cout << "source.getReferPointer().B: " << source.getReferPointer()->getB() << endl;
 

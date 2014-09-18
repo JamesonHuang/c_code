@@ -1,9 +1,9 @@
-/*********************************************************************
-	@ Title:		�����-�麯��-���麯��
+﻿/*********************************************************************
+	@ Title:		虚基类-虚函数-纯虚函数
 
-	@ Description:		1���Ƚϻ��ࡢ�����
+	@ Description:		1、比较基类、虚基类
 
-				2���ȽϺ������麯��
+				2、比较函数、虚函数
 
 
 	@ Conclusion:			
@@ -15,9 +15,9 @@
 
 #include <iostream>
 using namespace std;
-//-----------------------1���Ƚϻ��ࡢ�����--------------------------//
+//-----------------------1、比较基类、虚基类--------------------------//
 
-/*�����������������*/
+/*不适用虚基类的情况下*/
 class A
 {
 public:
@@ -46,7 +46,7 @@ public:
 
 
 
-/*ʹ�����������*/
+/*使用虚基类的情况*/
 //class A
 //{
 //public:
@@ -80,10 +80,10 @@ int main()
 	d.B::iValue = 20;
 	d.C::iValue = 30;
     
-	//cout<<d.iValue<<endl; //���󣬲���ȷ�ķ���
-    cout<<d.A::iValue<<endl; //��ȷ
-    cout<<d.B::iValue<<endl; //��ȷ
-    cout<<d.C::iValue<<endl; //��ȷ
+	//cout<<d.iValue<<endl; //错误，不明确的访问
+    cout<<d.A::iValue<<endl; //正确
+    cout<<d.B::iValue<<endl; //正确
+    cout<<d.C::iValue<<endl; //正确
 
 
 	return 0;
