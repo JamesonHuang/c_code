@@ -1,5 +1,4 @@
-c_code
-======
+
 
 Content:
 
