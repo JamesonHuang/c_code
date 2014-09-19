@@ -5,7 +5,7 @@ c_code
 
 >>[1、C/C++ 练习代码](https://github.com/JamesonHuang/c_code/tree/master/C%20%26%20C%2B%2B%E7%BB%83%E4%B9%A0%E4%BB%A3%E7%A0%81)
 	
->>[2、C 经典实例代码]()
+>>[2、C 经典实例代码](https://github.com/JamesonHuang/c_code/tree/master/C%E7%BB%8F%E5%85%B8%E5%AE%9E%E4%BE%8B%E4%BB%A3%E7%A0%81)
 	
 >####参考书：
 	
