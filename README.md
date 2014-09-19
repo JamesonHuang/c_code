@@ -1,8 +1,9 @@
+c_code
+======
 
+<h>Content:</h>
 
-Content:
-
-	<a href= "baidu.com">1、C/C++ 练习代码</a>
+<a href= "baidu.com">1、C/C++ 练习代码</a>
 	
 		2、C 经典算法代码
 	
